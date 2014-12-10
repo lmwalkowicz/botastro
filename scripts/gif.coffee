@@ -25,7 +25,7 @@ module.exports = (robot) ->
       # use jquery to run selector and return the elements
       callback window.$(selector)
 
-  # fetch a drupal.org page using http scraping
+  # fetch a GIF from giphy
   getGIF = (msg) ->
     theObject = msg.match[1]
     url = "http://giphy.com/search/space-#{theObject}"
@@ -38,5 +38,4 @@ module.exports = (robot) ->
         theGIFs = (gif.src for gif in gifs)
         msg.send msg.random theGIFs
 
-  # listen for page links
   robot.hear /gif (.*)/, getGIF

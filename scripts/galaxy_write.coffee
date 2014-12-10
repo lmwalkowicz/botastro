@@ -1,10 +1,22 @@
+# Description:
+#   Write wirds with galaxies
+#
+# Dependencies:
+#   None
+#
+# Commands:
+#   galaxify <string> - returns an image of the most stellar string ever
+#
+# Author:
+#   stuartlynn
+
 urlFormEncode = (str) ->
   escape(str)
     .replace(new RegExp('\\+','g'),'%2B')
     .replace(new RegExp('%20','g'),'+')
 
 module.exports = (robot) ->
-  robot.respond /galaxy this (.*)/i, (msg) ->
+  robot.respond /galaxify (.*)/i, (msg) ->
     try
       text = msg.match[1]
 

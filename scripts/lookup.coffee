@@ -18,9 +18,10 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         try
           json = JSON.parse(body)
-          msg.send "#{json.image.src}\n"
+          text = "#{json.image.src}"
         catch error
-          msg.send "No info found"
+          text = "No info found"
+        msg.send text
 
   robot.respond /tell me about (.*)/i, (msg) ->
     theObject = escape(msg.match[1])
@@ -28,6 +29,7 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         try
           json = JSON.parse(body)
-          msg.send "#{theObject} is a #{json.category.avmdesc}. It's at RA #{json.ra.decimal}, dec: #{json.dec.decimal}\n"
+          text = "#{theObject} is a #{json.category.avmdesc}. It's at RA #{json.ra.decimal}, dec: #{json.dec.decimal}"
         catch error
-          msg.send "No info found"
+          text = "No info found"
+        msg.send text

@@ -18,7 +18,7 @@ module.exports = (robot) ->
           json = JSON.parse(body)
           place = json.response.checkins.items[0].venue.name
           type = json.response.checkins.items[0].venue.categories[0].name
-          text = "Lintott is at #{place}, which is a #{type}"
+          text = "Lintott last spotted at #{place}, which is a #{type}"
         catch error
           text = "No info found"
         msg.send text

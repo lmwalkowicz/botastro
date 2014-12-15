@@ -66,7 +66,7 @@ funfacts = [
   "Only half a billionth of the energy released by the Sun reaches Earth.",
   "Rogue planets are not bound by any star, brown dwarf or another planet which makes them free-float around the galaxy.",
   "Sweeps 10 is the planet with the shortest orbital period found. It orbits its star in only 10 hours.",
-  "85% of all stars in our galaxy are part of multiple-star systems.",
+  "85\% of all stars in our galaxy are part of multiple-star systems.",
   "Some brown dwarfs have liquid iron rain falling down on them.",
   "The light emitted by the Sun is actually 30,000 years old.",
   "Of the over 20 million meteors that are observable every day only one or two reach the surface of Earth.",

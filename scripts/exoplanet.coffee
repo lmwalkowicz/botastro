@@ -25,5 +25,5 @@ module.exports = (robot) ->
         period = (period.toFixed 0) + " hour"
     exoplanet.name + " is an exoplanet with a " + period + " long year"
 
-  robot.respond /exoplanet me/i, (msg) ->
+  robot.respond /exoplanet me*/i, (msg) ->
     msg.send generate(msg)

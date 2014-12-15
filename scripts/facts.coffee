@@ -88,5 +88,5 @@ funfacts = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /fun fact/i, (msg) ->
+  robot.respond /fun fact*/i, (msg) ->
     msg.send msg.random funfacts

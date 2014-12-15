@@ -15,7 +15,7 @@
 apod_data = "https://raw.githubusercontent.com/slowe/apod/master/apod.json"
 
 module.exports = (robot) ->
-  robot.respond /apod me/i, (msg) ->
+  robot.respond /apod me*/i, (msg) ->
     msg.http(apod_data)
       .get() (err, res, body) ->
         apods = JSON.parse(body).apod
